@@ -1,0 +1,108 @@
+# Slides
+
+slides/archive/
+slides/components/
+slides/dist
+slides/node_modules/
+slides/snippets/
+slides/.vite/
+
+slides/*.local
+slides/*.pdf
+slides/.DS_Store
+slides/.npmrc
+slides/.remote-assets
+slides/.vite-inspect
+slides/README.md
+slides/components.d.ts
+slides/netlify.toml
+slides/package-lock.json
+slides/package.json
+slides/pages/imported-slides.md
+slides/public/*.pdf
+slides/public/index.html
+slides/slides.md
+slides/vercel.json
+slides/~*
+
+
+# Python
+**/.idea/
+.idea/**
+
+/__pycache__
+/code/__pycache__
+
+# Code
+
+code/ai_s2_conda_oud.yaml
+code/scratch.py
+
+code/api-requests/.vscode/
+code/api-requests/media/*.webp
+
+/code/ai-s2/.vscode
+/code/ai-s2/__pycache__
+/code/ai-s2/python/.vscode
+/code/ai-s2/python/__pycache__
+/code/ai-s2/python/playgrounds/__pycache__
+/code/ai-s2/python/pytest/__pycache__
+/code/ai-s2/python/pytest/planner/__pycache__
+/code/ai-s2/python/pytest/planner/tests/__pycache__
+/code/ai-s2/python/pytest/planner/tests/outline.txt
+
+code/mastermind/__pycache__/
+code/mastermind/algorithm/__pycache__/
+
+code/skip-bo/__pycache__
+
+
+# Documents
+
+code/ai-s2/document/verantwoordingsdocument.html
+code/ai-s2/document/verantwoordingsdocument.pdf
+
+
+# Misc
+
+lslides/
+
+
+# cmake clion stuff
+**/cmake-build-debug/*
+**/idea/*
+
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+*.log
