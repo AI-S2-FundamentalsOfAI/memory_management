@@ -25,7 +25,7 @@ struct HashmapItem {
     /* TODO: Definieer beide constructors, zorg ervoor dat je memory alloceert op de heap */
     HashmapItem()
         : key(strdup("")), value(strdup("")), next(nullptr) {}
-    HashmapItem(const char* k, const char* v){}
+    HashmapItem(const char* k, const char* v)
 
     /* TODO: maak deze destructor werkend, en voorzie deze van commentaar. */
     ~HashmapItem() {

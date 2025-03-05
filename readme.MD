@@ -8,6 +8,15 @@ Auteurs: David Isaacs Paternostro en Nick Roumimper
 * Naam:
 * Datum:
 
+## Inleiding
+In deze opdracht gaan we zelf een HashMap implementeren. De bedoelde werking hiervan zal worden behandeld tijdens een van de komende colleges, 
+Echter, conceptueel kun je dit datatype zien als een opzoektabel: gegeven een key, vertalen we die key naar een geëncodeerde variant ervan (een hash), 
+wat ons een positie geeft om een waarde (value) mee terug te geven. Als je dat in de oren klinkt als een dictionary-achtig object in het gebruik, 
+dan heb je goed opgelet.
+
+Belangrijke hint: de exit code van het programma is bij de eerste uitvoering geen 0 (lees: er gaat dus iets mis). Pas als alle tests slagen en je code 
+draait eindigt het programma met een 0! Dit is een voorwaarde voor een geldige inlevering.
+
 ## Relevante bronnen
 
 De oplettende lezer zal zien dat de termen hash table en hash map allebei gebruikt worden, er zijn kleine technische verschillen maar voor deze 
