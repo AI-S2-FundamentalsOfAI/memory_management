@@ -9,9 +9,9 @@ Auteurs: David Isaacs Paternostro en Nick Roumimper
 * Datum:
 
 ## Inleiding
-In deze opdracht gaan we zelf een HashMap implementeren. De bedoelde werking hiervan zal worden behandeld tijdens een van de komende colleges, 
-Echter, conceptueel kun je dit datatype zien als een opzoektabel: gegeven een key, vertalen we die key naar een geëncodeerde variant ervan (een hash), 
-wat ons een positie geeft om een waarde (value) mee terug te geven. Als je dat in de oren klinkt als een dictionary-achtig object in het gebruik, 
+In deze opdracht gaan we zelf een HashMap-datastructuur implementeren. Bij het implementeren van deze datastructuur gaan handmatig data alloceren en deallocaren. Tevens gaan we, ter educatie, een keer met rudimentaire C-array's werken. Dit is niet iets wat we aanraden dat je blijft doen na deze opdracht, tenzij je embedded gaat programmeren.  
+Echter, conceptueel kun je deze datastructuur zien als een opzoektabel: gegeven een key, vertalen we die key naar een geëncodeerde variant ervan (een hash),
+wat ons een positie geeft om een waarde (value) mee terug te geven. Als je dat in de oren klinkt als een dictionary-achtig object in het gebruik,
 dan heb je goed opgelet.
 
 Belangrijke hint: de exit code van het programma is bij de eerste uitvoering geen 0 (lees: er gaat dus iets mis). Pas als alle tests slagen en je code 

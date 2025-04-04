@@ -18,13 +18,13 @@
 
 
 struct HashmapItem {
-    const char* key;
-    const char* value;
+    char* key;
+    char* value;
     HashmapItem* next;
 
     /* TODO: Definieer beide constructors, zorg ervoor dat je memory alloceert op de heap */
     HashmapItem()
-        : key(strdup("")), value(strdup("")), next(nullptr) {}
+        : key(strdup("")), value(strdup("")), next(nullptr) {} // Het gebruiken van stdrup vereist free bij dealloceren
     HashmapItem(const char* k, const char* v)
 
     /* TODO: maak deze destructor werkend, en voorzie deze van commentaar. */
@@ -38,18 +38,18 @@ struct HashMap
     uint32_t size;
     uint32_t count;
 
-    /* TODO: Definieer de constructor, zorg ervoor dat je memory alloceert op de heap (Hashtable(<type> size)) */
+    /* TODO: Definieer de constructor, zorg ervoor dat je memory alloceert op de heap (HashMap(<type> size)) */
     // Schrijf waar deze comment staat in plaats daarvan een constructor
-
-    // Dit is nodig voor de operator overload zodat we een hashtable kunnen outputten naar de console
-    friend std::ostream& operator<<(std::ostream& os, HashMap* hm);
+    HashMap() {
+        items = new HashmapItem*[size]{};
+    }
 
     /* TODO: maak deze destructor werkend, en voorzie deze van commentaar. */
     ~HashMap() {
     }
 
     /* Je kan deze functie gebruiken om te tellen hoeveel items je daadwerkelijk hebt toegevoegd */
-    unsigned int count_existing_items() {
+    [[nodiscard]] size_t count_existing_items() const {
         size_t cnt =0;
         HashmapItem* item;
         for (size_t i = 0; i < size; i++) {
@@ -66,13 +66,12 @@ struct HashMap
     void add_item(const char* key, const char* value) {
     }
 
+
     /* TODO: Maak deze functie af en voorzie van commentaar */
     HashmapItem* find_item(const char* key) const {
     }
 
     /* TODO: Maak deze functie af, voorzie van commentaar en bron. Leg uit waarom je voor specifiek deze implementatie van een hashfunctie hebt gekozen
-     * https://theartincode.stanis.me/008-djb2/
-     * djb2 hash
      */
     size_t hash(const char* str) const {
     }
@@ -185,7 +184,7 @@ void test_create_and_delete_hashmap(const unsigned int& size) {
     assert(hm->find_item(key12));
     assert(hm->find_item(key13));
 
-    std::vector<const char**> items_copy;
+    std::vector<char**> items_copy;
     for (uint32_t i = 0; i < hm->size; i++) {
         HashmapItem* item = hm->items[i];
         while (item) {
@@ -301,7 +300,6 @@ void test_collision()
 int main()
 {
     const unsigned int size = 4096;
-    assert (!(size & (size -1)) && size > 0); // Check if size is a power of 2 (more efficient hashing cause bit operations)
     test_hash(size);
     std::cout << "The test 'testHash' has succeeded!" << std::endl;
     test_create_and_delete_hashmap(3);
